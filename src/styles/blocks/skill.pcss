@@ -1,0 +1,40 @@
+.skill__shape {
+  width: 200px;
+  height: 200px;
+  fill: transparent;
+  //stroke: gray;
+  //stroke-width: 4px;
+}
+.skills-row__list{
+  display: flex;
+  z-index: 10;
+}
+
+.skills-row__title{
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 700;
+}
+.skill__circle--position--under{
+  fill: transparent;
+  stroke: #888;
+  stroke-width: 1px;
+}
+.skill__circle--position--above{
+  stroke-dasharray: 523;
+  stroke-width: 10px;
+  stroke: #d0731b;
+  transform: rotate(180deg);
+  transform-origin: 50% 50%;
+  animation: skillProgress 100s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes skillProgress {
+  0% {
+    stroke-dashoffset: 540;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
